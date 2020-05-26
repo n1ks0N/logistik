@@ -1,3 +1,20 @@
+$font: 'Oswald', sans-serif;
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+* {
+    font-family: $font;
+}
+.btn, .form-control {
+    border-radius: 0;
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -10,79 +27,103 @@ section, header, footer, nav, div, span, ul, li, a {
     box-sizing: border-box;
 }
 
-header {
+.header {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    background-color: #f2f2f2;
+
+    @include flexRow();
+    width: 100%;
+    padding: 33px 100px;
+
+}
+.menu {
+    @include flexRow();
+    list-style-type: none;
+    li {
+        margin: 0 15px;
+        text-transform: uppercase;
+    }
 }
 
-header nav {
+.contact {
+    @include flexRow();
 }
-
-header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.contact__icon {
+    margin-right: 10px;
 }
-
-header ul li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-header ul a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #4d4d4d;
-    height: 50px;
-    display: block;
-    position: relative;
-}
-
-header ul a span {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
+.contact__phone {
+    margin-right: 10px;
 }
 
 section {
     float: left;
     display: block;
     height: 100%;
-    padding: 75px 0 0 0;
     margin: 0;
 }
 
-#section-section1 {
-    background: #2c3e50;
+.content {
+    @include flexRow();
 }
+.leftside {
+    height: 100vh;
+    width: 66%;
 
-#section-section2 {
-    background: #16a085;
+    padding-left: 100px;
 }
-
-#section-section3 {
-    background: #27ae60;
+.leftside__headlines {
+    margin-top: 320px;
 }
+.leftside__title {
+    height: 158px;
 
-#section-section4 {
-    background: #c0392b;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 110%;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
 }
+.leftside__subtitle {
+    margin-top: 46px;
+    
+    font-size: 18px;
+    line-height: 100%;
 
-.horizon-prev, .horizon-next {
-    position: fixed;
-    top: 50%;
-    margin-top: -24px;
-    z-index: 9999;
+    text-transform: uppercase;
+
+    color: #F01212;
 }
-
-.horizon-prev {
-    left: 20px;
+form {
+    margin-top: 100px;
 }
+.form-control {
+    width: 302px;
+    height: 40px;
+    padding: 8px 33px;
 
-.horizon-next {
-    right: 20px;
+    border: 1px solid #C9CCD4;
+    box-sizing: border-box;
+}
+.btn-danger {
+    width: 302px;
+    height: 40px;
+
+    text-transform: uppercase;
+
+    background: #F01212;
+}
+.rightside {
+    height: 100vh;
+    width: 33%;
+    background-color: #E95531;
+    z-index: -1;
+}
+.about, .bottom {
+    position: absolute;
+    bottom: 0;
 }

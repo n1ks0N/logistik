@@ -55,32 +55,6 @@
                 }
             });
 
-            if ($.fn.horizon.defaults.swipe) {
-                $(document).swipe({
-                    // Generic swipe handler for all directions.
-                    swipe: function (event, direction, distance, duration, fingerCount) {
-                        if (scrolls[direction]) {
-                            scrolls[direction]();
-                        }
-                    },
-                    /*click: function (event, target) {
-                     event.preventDefault();
-                     event.stopPropagation();
-                     event.stopImmediatePropagation();
-
-                     //$(target).click();
-                     },
-                     tap: function (event, target) {
-                     event.preventDefault();
-                     event.stopPropagation();
-                     event.stopImmediatePropagation();
-
-                     $(target).click();
-                     },*/
-                    // Default is 75px, set to 0 for demo so any distance triggers swipe
-                    threshold: 75
-                });
-            }
 
             $(window).on('resize', function () {
                 sizeSections();
