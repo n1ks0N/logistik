@@ -47,19 +47,19 @@
         </div>
         <menu class="menu">
             <li>
-                <a href="#section-section1"><span>главная</span></a>
+                <a href="#section-section1" class="menu__link menu__link_active"><span class="menu__link__item">главная</span></a>
             </li>
             <li>
-                <a href="#section-section2"><span>услуги</span></a>
+                <a href="#section-section2" class="menu__link"><span class="menu__link__item">услуги</span></a>
             </li>
             <li>
-                <a href="#section-section3"><span>продукция</span></a>
+                <a href="#section-section3" class="menu__link"><span class="menu__link__item">продукция</span></a>
             </li>
             <li>
-                <a href="#section-section4"><span>о компании</span></a>
+                <a href="#section-section4" class="menu__link"><span class="menu__link__item">о компании</span></a>
             </li>
             <li>
-                <a href="#section-section5"><span>контакты</span></a>
+                <a href="#section-section5" class="menu__link"><span class="menu__link__item">контакты</span></a>
             </li>
         </menu>
         <div class="contact">
@@ -105,21 +105,27 @@
                 о нас
             </div>
             <div class="bottom">
-                <button type="button" class="btn">все услуги</button>
+                <button type="button" class="btn">все услуги
+                    <svg width="202" height="8" viewBox="0 0 202 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M201.354 4.35355C201.549 4.15829 201.549 3.84171 201.354 3.64645L198.172 0.464466C197.976 0.269204 197.66 0.269204 197.464 0.464466C197.269 0.659728 197.269 0.976311 197.464 1.17157L200.293 4L197.464 6.82843C197.269 7.02369 197.269 7.34027 197.464 7.53553C197.66 7.7308 197.976 7.7308 198.172 7.53553L201.354 4.35355ZM0 4.5H201V3.5H0V4.5Z" fill="#F01212"/>
+                    </svg>                    
+                </button>
             </div>
         </div>
     </section>
-    <section data-role="section" id="section-section2" style="background-color: red;"></section>
-    <section data-role="section" id="section-section3" style="background-color: green;"></section>
+    <section data-role="section" id="section-section2"></section>
+    <section data-role="section" id="section-section3"></section>
     <section data-role="section" id="section-section4"></section>
     <section data-role="section" id="section-section5"></section>
 
     <footer data-role="footer" id="footer">
-
+        <div class="counter">
+            <p>0<span>1</span> | 06</p>
+        </div>
     </footer>
 
     <script type="text/javascript">
-        $('section').horizon({swipe: false});
+        $('section').horizon({ swipe: false });
 
         $(document).on('click', '.go-to-2', function () {
             $(document).horizon('scrollTo', 'section-section2');

@@ -7,8 +7,8 @@
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -62,9 +62,22 @@ section, header, footer, nav, div, span, ul, li, a {
   list-style-type: none;
 }
 
-.menu li {
-  margin: 0 15px;
+.menu__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
   text-transform: uppercase;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.menu__link:hover {
+  color: #E95531;
+  text-decoration: none;
+}
+
+.menu__link_active {
+  color: #E95531;
 }
 
 .contact {
@@ -91,6 +104,17 @@ section, header, footer, nav, div, span, ul, li, a {
 
 .contact__phone {
   margin-right: 10px;
+}
+
+.contact__link_color {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.contact__link_color:hover {
+  color: #000;
+  text-decoration: none;
 }
 
 section {
