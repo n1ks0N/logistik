@@ -14,17 +14,21 @@ $font: 'Oswald', sans-serif;
 .btn, .form-control {
     border-radius: 0;
 }
-
 html, body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 0;
     margin: 0;
     overflow: hidden;
 }
-
 section, header, footer, nav, div, span, ul, li, a {
     box-sizing: border-box;
+}
+section {
+    float: left;
+    display: block;
+    height: 100%;
+    margin: 0;
 }
 
 .header {
@@ -36,7 +40,6 @@ section, header, footer, nav, div, span, ul, li, a {
     @include flexRow();
     width: 100%;
     padding: 33px 100px;
-
 }
 .menu {
     @include flexRow();
@@ -78,13 +81,17 @@ section, header, footer, nav, div, span, ul, li, a {
     text-decoration: none;
 }
 
-section {
-    float: left;
-    display: block;
-    height: 100%;
-    margin: 0;
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.counter {
+    font-size: 50px;
+    color: #000;
 }
 
+/* Main */
 .content {
     @include flexRow();
 }
@@ -100,7 +107,7 @@ section {
 .leftside__title {
     height: 158px;
 
-    font-weight: 500;
+    font-weight: 700;
     font-size: 72px;
     line-height: 110%;
 
@@ -144,7 +151,45 @@ form {
     background-color: #E95531;
     z-index: -1;
 }
+.rightside__img {
+    position: absolute;
+    left: 42.6%;
+    right: 5.31%;
+    top: 14.9%;
+    bottom: 15.1%;
+    width: 1000px;
+    height: 686px;
+}
+.rightside__img_size {
+    width: 1000px;
+    height: 686px;
+}
 .about, .bottom {
     position: absolute;
     bottom: 0;
+}
+.about {
+    border-radius: 100%;
+    background-color: #000;
+    width: 110px;
+    height: 110px;
+
+    position: absolute;
+    padding-top: calc(110px / 2 - 55px / 2);
+
+    text-align: center;
+}
+.about__text {
+    font-size: 18px;
+    line-height: 18px;
+    height: 37px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+.bottom {
+    width: 302px;
+    left: calc(50% - 302px / 2);
 }

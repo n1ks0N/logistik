@@ -107,7 +107,20 @@
             console.log('Scroll where? I think you want me to go out of my limits. Sorry, no can do.');
             return;
         }
+       
+        if (index < 3) {
+            $('.menu__link_active').removeClass('menu__link_active');
+            $('.menu__link:eq(' + index + ')').addClass('menu__link_active');
+        } else if (index > 3) {
+            let i = index - 1;
+            $('.menu__link_active').removeClass('menu__link_active');
+            $('.menu__link:eq(' + i + ')').addClass('menu__link_active');
+        } else {
+            $('.menu__link_active').removeClass('menu__link_active');
+        }
 
+
+        $('.counter__index').text(index + 1);
         console.log('Scroll to: ' + index);
         $.fn.horizon.defaults.i = index;
 
