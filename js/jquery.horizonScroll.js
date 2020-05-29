@@ -117,6 +117,12 @@
         // Counter operation
         $('.counter__index').text(index + 1);
 
+        if (index > 0) {
+            $('.contact__btn').css('opacity', '1');
+        } else {
+            $('.contact__btn').css('opacity', '0');
+        }
+
 
         console.log('Scroll to: ' + index);
         $.fn.horizon.defaults.i = index;

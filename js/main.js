@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    
+    $('.contacts__btn').click(() => {
+        document.location.href = '#section-section1';
+    });
 
     $('.services-rightside__item__text').click(function () {
         $('.services-rightside__title').text($(this).text());
