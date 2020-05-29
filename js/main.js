@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('.services-rightside__item__text').click(function () {
         $('.services-rightside__title').text($(this).text());
     });

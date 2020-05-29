@@ -482,3 +482,110 @@ form {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/main-image.png);
     background-size: cover;
 }
+
+/* how */
+#section-section4 {
+    background-image: url(../images/how.jpg);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+}
+.how-leftside {
+    padding-bottom: 225px;
+}
+.how-rightside {
+    @include flexColumn();
+    width: 100%;
+    height: 100%;
+}
+.how-rightside__content {
+    @include flexRow();
+    justify-content: space-evenly;
+    width: 100%;
+}
+.how-rightside__item {
+    @include flexColumn();
+}
+.how-rightside__item__number {
+    font-size: 18px;
+    line-height: 27px;
+
+    letter-spacing: 1px;
+
+    color: #000000;
+
+    text-shadow: 0px 50px 20px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 15px;
+}
+.how-rightside__item__text {
+    font-size: 16px;
+    line-height: 100%;
+
+    text-transform: uppercase;
+
+    color: #000000;
+
+    text-shadow: 0px 50px 20px rgba(0, 0, 0, 0.25);
+}
+.how-rightside__text {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 110%;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    opacity: 0.5;
+
+    margin-top: 250px;
+    margin-bottom: 50px;
+}
+
+/* about */
+#section-section5 {
+    background-image: url(../images/about.jpg);
+}
+.about-licenses {
+    @include flexColumn();
+    align-items: flex-start;
+}
+.about-licenses__link, .about-licenses__link:hover {
+    font-size: 18px;
+    line-height: 100%;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #000000;
+    
+    margin: 7.5px 0;
+}
+.about-licenses__link_underline, .about-licenses__link_underline:hover {
+    padding-bottom: 15px;
+    text-decoration: underline #E95531;;
+}
+.about-rightside__title {
+    font-size: 30px;
+    line-height: 110%;
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #000000;
+    span {
+        color: #E95531;
+    }
+}
+.about-rightside__item__counter {
+    font-size: 30px;
+    line-height: 110%;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #E95531;
+
+}
