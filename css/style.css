@@ -11,24 +11,25 @@ ul, p, h5 {
   border-radius: 0;
 }
 
-@media all and (min-width: 1024px) {
-  html, body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-  section {
-    float: left;
-    display: block;
-    height: 100%;
-    margin: 0;
-  }
-  section, header, footer, nav, div, span, ul, li, a {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+section {
+  float: left;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+section, header, footer, nav, div, span, ul, li, a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header {
@@ -53,6 +54,30 @@ ul, p, h5 {
       flex-wrap: wrap;
   width: 100%;
   padding: 33px 100px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.header .contact__btn {
+  display: none;
+}
+
+.header_active {
+  background: rgba(201, 204, 212, 0.2);
+  border: 1px solid #C9CCD4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 100px;
+  width: 100%;
+}
+
+.header_active .logo_size {
+  width: 138px;
+  height: 40px;
+}
+
+.header_active .contact__btn {
+  display: block;
 }
 
 .menu {
@@ -93,6 +118,28 @@ ul, p, h5 {
 }
 
 .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact a:hover {
+  text-decoration: none;
+}
+
+.contact__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +223,6 @@ ul, p, h5 {
 }
 
 .leftside__title {
-  height: 158px;
   font-weight: 700;
   font-size: 72px;
   line-height: 110%;
@@ -707,6 +753,7 @@ form {
 #section-section4 {
   background-image: url(../images/how.jpg);
   background-position-y: bottom;
+  background-position-x: left;
   background-repeat: no-repeat;
 }
 
@@ -1116,5 +1163,168 @@ form {
   font-size: 16px;
   margin-right: 45px;
   cursor: default !important;
+}
+
+/* MEDIA */
+@media all and (max-width: 1440px) {
+  .header, .header_active {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .contact__btn {
+    margin: 0;
+  }
+  .services-rightside {
+    padding: 0;
+  }
+  .services-rightside__text, .services-rightside__advantages {
+    width: calc(100% - 55px);
+  }
+  .services-rightside__advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .services-rightside__advantages :nth-child(2n) {
+    display: none;
+  }
+  .services-rightside__adv {
+    margin: 10px 0;
+  }
+  .prod-rightside {
+    height: 80vh;
+  }
+  .prod-rightside__item {
+    width: 40%;
+    height: 30%;
+  }
+  .prod-rightside__item__text {
+    margin: 0 10px;
+    margin-bottom: 15px;
+  }
+  .footer {
+    bottom: 15px;
+    right: 15px;
+  }
+  #section-section4 {
+    background-position-x: left;
+    background-position-y: bottom;
+  }
+  .about-rightside__content {
+    width: 100%;
+  }
+  .about-rightside__content :nth-child(1), .about-rightside__content :nth-child(4) {
+    margin-left: 25px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .logo {
+    display: none;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+  }
+  .leftside {
+    padding-left: 25px;
+  }
+  .leftside__headlines {
+    margin-top: 200px;
+  }
+  .header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .services-leftside {
+    padding-left: 25px;
+  }
+  .services-rightside {
+    height: 100vh;
+  }
+  .services-rightside__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .services-rightside__content :only-child {
+    width: 100%;
+  }
+  .services-rightside__advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .services-rightside__text {
+    margin-bottom: 20px;
+  }
+  .services-rightside__img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .services-rightside__title {
+    margin-bottom: 10px;
+  }
+  .prod-rightside__item__header {
+    padding: 0;
+  }
+  #section-section4 {
+    background-position-x: 15%;
+    background-position-y: bottom;
+  }
+  .about-rightside {
+    padding-right: 0;
+  }
+  .about-rightside__item {
+    margin: 10px !important;
+    width: 278px;
+  }
+  .about-rightside__inner-text {
+    width: 500px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

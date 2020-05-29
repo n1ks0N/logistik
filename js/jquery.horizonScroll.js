@@ -118,9 +118,9 @@
         $('.counter__index').text(index + 1);
 
         if (index > 0) {
-            $('.contact__btn').css('opacity', '1');
+            $('.header').addClass('header_active')
         } else {
-            $('.contact__btn').css('opacity', '0');
+            $('.header_active').removeClass('header_active')
         }
 
 
