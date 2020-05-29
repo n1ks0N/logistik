@@ -547,6 +547,9 @@ form {
 #section-section5 {
     background-image: url(../images/about.jpg);
 }
+.about-leftside__text {
+    margin-bottom: 120px;
+}
 .about-licenses {
     @include flexColumn();
     align-items: flex-start;
@@ -566,6 +569,12 @@ form {
     padding-bottom: 15px;
     text-decoration: underline #E95531;;
 }
+.about-rightside {
+    @include flexColumn();
+    align-items: flex-start;
+    padding-right: 70px;
+    padding-top: 125px;
+}
 .about-rightside__title {
     font-size: 30px;
     line-height: 110%;
@@ -575,9 +584,49 @@ form {
     text-transform: uppercase;
 
     color: #000000;
+
+    margin-bottom: 33px;
     span {
         color: #E95531;
     }
+}
+.about-rightside__text {
+    width: 893px;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: normal;
+
+    color: #000000;
+
+    opacity: .7;
+
+    margin-bottom: 36px;
+}
+.about-rightside__content {
+    @include flexRow();
+    justify-content: flex-start;
+    :nth-child(odd) {
+    background-color: rgba($color: #fff, $alpha: .1);
+    }
+    :nth-child(1), :nth-child(4) {
+        margin-left: 0;
+    }
+
+    width: 1110px;
+}
+.about-rightside__item {
+    width: 320px;
+    height: 160px;
+
+    @include flexColumn();
+    align-items: flex-start;
+
+    background-color: rgba($color: #E95531, $alpha: .1);
+
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin: 25px;
 }
 .about-rightside__item__counter {
     font-size: 30px;
@@ -587,5 +636,12 @@ form {
     text-transform: uppercase;
 
     color: #E95531;
+}
+.about-rightside__item__text {
+    font-size: 16px;
+    line-height: 130%;
 
+    text-transform: uppercase;
+
+    color: #000000;
 }
