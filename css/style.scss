@@ -26,6 +26,7 @@ ul, p, h5 {
     border-radius: 0;
 }
  
+@media all and (min-width: 415px) {
 html, body {
     width: 100%;
     height: 100%;
@@ -42,6 +43,7 @@ section {
 }
 section, header, footer, nav, div, span, ul, li, a {
     box-sizing: border-box;
+}
 }
 
 
@@ -68,6 +70,7 @@ section, header, footer, nav, div, span, ul, li, a {
     .logo_size {
         width: 138px;
         height: 40px;
+        transition: all 1s ease-in-out;
     }
     .contact__btn {
         display: block;
@@ -809,6 +812,12 @@ form {
     cursor: default !important;
 }
 
+@media all and (min-width: 415px) {
+    .mobile {
+        display: none;
+    }
+}
+
 /* MEDIA */
 @media all and (max-width: 1440px) {
     .header, .header_active {
@@ -923,5 +932,147 @@ form {
     }
     .about-rightside__inner-text {
         width: 500px;
+    }
+}
+@media all and (max-width: 320px) {
+    .html, body {
+        overflow: auto;
+    }
+    .navBurger {
+        cursor: pointer;
+        background: #111;
+        box-sizing: border-box;
+        background-clip: content-box;
+        width: 30px;
+        height: 24px;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            background: #111;
+            height: 2px;
+            width: 100%;
+            left: 0;
+            will-change: rotate;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        &:before {
+            top: -10px;
+        }
+        &:after {
+            bottom: -10px;
+            width: 90%;
+        }
+        &.active {
+            background: transparent;
+            background-clip: content-box;
+        }
+        &.active:before {
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+            top: 0;
+            background: #eee;
+            width: 110%;
+        }
+        &.active:after {
+            bottom: 0;
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+            background: #eee;
+            width: 110%;
+        }
+    }
+    
+    .overlay {
+        position: fixed;
+        background: #2a3140;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 400px;
+        opacity: 0;
+        transform-origin: left top;
+        transform: scale(0);
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        &.open {
+            opacity: 0.99;
+            visibility: visible;
+            transform: scale(1);
+            li {
+                display: block;
+            }
+        }
+    }
+    
+    .overlayMenu {
+        position: absolute;
+        text-align: right;
+        left: 10vw;
+        top: 10vw;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            height: 100%;
+            li {
+                display: block;
+                position: relative;
+                opacity: 1;
+                width: 100%;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            left: 50px;
+        }
+        100% {
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+        }
+    }
+    .content {
+        width: 100vw;
+        min-height: 1px;
+    }
+    .menu, .rightside__img, .contact__contact, .rightside, .about {
+        display: none;
+    }
+    .contact__btn {
+        width: 200px;
+    }
+    .leftside__headlines {
+        margin-top: 100px;
+    }
+    .leftside__title {
+        font-size: 40px;
+    }
+    .form-control, .leftside {
+        width: 100%;
+        height: auto;
+    }
+    .leftside {
+        padding-right: 25px;
+    }
+    .btn-danger {
+        width: 100%;
     }
 }

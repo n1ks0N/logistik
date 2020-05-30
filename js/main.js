@@ -19,4 +19,9 @@ $(document).ready(function () {
         $(this).removeClass('prod-rightside__item__active-bg');
         $('.prod-rightside__item__header', this).css('background', 'rgba(0, 0, 0, 0.5)');
     });
+    $("#navToggle").click(function() {
+        $(this).toggleClass("active");
+        $(".overlay").toggleClass("open");
+    });
+    
 });

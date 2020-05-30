@@ -46,6 +46,21 @@
         <div class="logo">
             <img src="images/logo.png" alt="" class="logo_size">
         </div>
+        <div class="burger mobile">
+            <div class="overlay">
+                <nav class="overlayMenu">  
+                    <ul role="menu">
+                        <li><a href="#" role="menuitem">Parity</a></li>
+                        <li><a href="#" role="menuitem">Abstract</a></li>
+                        <li><a href="#" role="menuitem">Educated</a></li>
+                        <li><a href="#" role="menuitem">Decorum</a></li>
+                        <li><a href="#" role="menuitem">Tenuous</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="navBurger" role="navigation" id="navToggle"></div> 
+        </div>
         <menu class="menu">
             <li>
                 <a href="#section-section1" class="menu__link menu__link_active"><span
@@ -473,7 +488,9 @@
     </footer>
 
     <script type="text/javascript">
-        $('section').horizon({ swipe: false });
+        if ($(window).width() > 720) {
+            $('section').horizon({ swipe: false });
+        }
 
         $(document).on('click', '.go-to-2', function () {
             $(document).horizon('scrollTo', 'section-section2');
