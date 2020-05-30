@@ -824,6 +824,9 @@ form {
         padding-left: 50px;
         padding-right: 50px;
     }
+    .leftside__headlines {
+        margin-top: 280px;
+    }
     .contact {
         @include flexColumn();
         align-items: flex-end;
@@ -838,10 +841,15 @@ form {
         width: calc(100% - 55px);
     }
     .services-rightside__advantages {
-        @include flexColumn();
+        @include flexRow();
+        width: calc(100% - 35px);
         :nth-child(2n) {
             display: none;
         }
+    }
+    .services-rightside__img {
+        width: 420px;
+        height: auto;
     }
     .services-rightside__adv {
         margin: 10px 0;
@@ -870,6 +878,91 @@ form {
         :nth-child(1), :nth-child(4) {
             margin-left: 25px;
         }
+    }
+}
+@media all and (max-width: 1366px) {
+    .services-rightside__img {
+        margin-right: 15px;
+    }
+    .leftside__title {
+        font-size: 65px;
+    }
+    .leftside__headlines {
+        margin-top: 200px;
+    }
+    .services-rightside__margin {
+        margin-top: 50px;
+    }
+    .rightside {
+        width: 250px;
+    }
+    .rightside__img_size {
+        width: 800px;
+        height: auto;
+    }
+    .prod-rightside {
+        margin-top: 35px;
+    }
+    .prod-rightside__item__header {
+        height: 35px;
+        padding: 0;
+    }
+    .prod-rightside__item__btn {
+        width: 100px;
+        height: 35px;
+        line-height: normal;
+        font-size: 14px;
+    }
+    .services-leftside {
+        padding-top: 150px;
+    }
+    #section-section2, #section-section3, #section-section5 {
+        background-position-y: -120px;
+        background-position-x: -70px;
+    }
+    #section-section4 {
+        background-position-y: 100px;
+        background-position-x: -100px;
+    }
+    .about-rightside__item {
+        width: 200px;
+        height: 120px;
+        padding-left: 0;
+    }
+    .about-rightside__inner-text {
+        width: 700px;
+    }
+    .about-rightside {
+        margin-left: 50px;
+    }
+    .contacts-rightside {
+        margin-left: 100px;
+        margin-bottom: 0;
+        margin-top: 150px;
+    }
+}
+@media all and (max-width: 1280px) {
+    .leftside__headlines {
+        margin-top: 180px;
+    }
+    .services-rightside__img {
+        width: 400px;
+        height: auto;
+        margin-right: 15px;
+    }
+    .services-rightside__text {
+        margin-bottom: 40px;
+    }
+    .services-rightside__advantages {
+        @include flexRow();
+        flex-wrap: nowrap;
+        width: calc(100% - 15px);
+    }
+    .services-leftside {
+        padding-top: 130px;
+    }
+    #section-section2 {
+        background-position-y: 250%;
     }
 }
 @media all and (max-width: 1024px) {
