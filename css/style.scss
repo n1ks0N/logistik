@@ -961,8 +961,14 @@ form {
     .services-leftside {
         padding-top: 130px;
     }
-    #section-section2 {
-        background-position-y: 250%;
+    .leftside__title {
+        font-size: 50px;
+    }
+    .prod-rightside {
+        height: 75vh;
+    }
+    .prod-rightside__item__text {
+        font-size: 12px;
     }
 }
 @media all and (max-width: 1024px) {
