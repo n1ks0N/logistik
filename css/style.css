@@ -1469,7 +1469,7 @@ form {
     width: 100vw;
     min-height: 1px;
   }
-  .menu, .rightside__img, .contact__contact, .rightside, .about {
+  .menu, .rightside__img, .contact__contact, .rightside, .about, .bottom {
     display: none;
   }
   .contact__btn {
@@ -1488,8 +1488,44 @@ form {
   .leftside {
     padding-right: 25px;
   }
-  .btn-danger {
+  .btn-danger, .services-leftside__text, .services-rightside__img, .services-rightside__text, .services-rightside__advantages {
     width: 100%;
+  }
+  .services-rightside__img {
+    height: auto;
+  }
+  .services-leftside {
+    padding-top: 100px;
+  }
+  .content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  form {
+    margin-top: 50px;
+  }
+  #section-section2 {
+    background-position-x: right;
+  }
+  .services-rightside, .services-rightside__advantages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .services-rightside__service-text {
+    padding: 5px 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

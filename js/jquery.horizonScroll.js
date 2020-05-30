@@ -113,6 +113,7 @@
         // Add class active for menu items
         $('.menu__link_active').removeClass('menu__link_active');
         $('.menu__link:eq(' + index + ')').addClass('menu__link_active');
+        $('.burger-menu__link:eq(' + index + ')').addClass('menu__link_active');
 
         // Counter operation
         $('.counter__index').text(index + 1);
