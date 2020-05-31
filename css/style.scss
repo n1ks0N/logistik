@@ -885,10 +885,10 @@ form {
         margin-right: 15px;
     }
     .leftside__title {
-        font-size: 65px;
+        font-size: 50px;
     }
     .leftside__headlines {
-        margin-top: 200px;
+        margin-top: 150px;
     }
     .services-rightside__margin {
         margin-top: 50px;
@@ -897,8 +897,8 @@ form {
         width: 250px;
     }
     .rightside__img_size {
-        width: 800px;
-        height: auto;
+        width: auto;
+        height: 500px;
     }
     .prod-rightside {
         margin-top: 35px;
@@ -1014,6 +1014,7 @@ form {
     }
     .services-rightside__title {
         margin-bottom: 10px;
+        text-align: center;
     }
     .prod-rightside__item__header {
         padding: 0;
@@ -1150,7 +1151,11 @@ form {
     }
     .content {
         width: 100vw;
-        min-height: 1px;
+        height: auto;
+    }
+    .services-rightside {
+        flex-wrap: nowrap !important;
+        height: auto;
     }
     .menu, .rightside__img, .contact__contact, .rightside, .about, .bottom {
         display: none;
@@ -1171,8 +1176,11 @@ form {
     .leftside {
         padding-right: 25px;
     }
-    .btn-danger, .services-leftside__text, .services-rightside__img, .services-rightside__text, .services-rightside__advantages {
+    .btn-danger, .services-rightside__img, .services-rightside__text, .services-rightside__advantages {
         width: 100%;
+    }
+    .services-leftside__text {
+        width: calc(100% - 25px);
     }
     .services-rightside__img {
         height: auto;
@@ -1194,5 +1202,48 @@ form {
     }
     .services-rightside__service-text {
         padding: 5px 10px;
+    }
+    .services-leftside__title {
+        font-size: 45px;
+    }
+    .prod-rightside__item {
+        width: 100%;
+        margin: 5px;
+        height: 200px;
+    }
+    .prod-rightside__item__text {
+        font-size: 15px;
+    }
+    .prod-rightside {
+        height: auto;
+    }
+    #section-section3 {
+        background-position-y: -370px;
+    }
+    .how-rightside {
+        @include flexColumn();
+        flex-direction: column-reverse;
+    }
+    .how-rightside__text {
+        margin-top: 0;
+    }
+    .how-leftside {
+        padding-bottom: 0;
+    }
+    .how-rightside__content {
+        @include flexColumn();
+    }
+    .about-leftside__text {
+        margin-bottom: 47px;
+    }
+    .about-rightside__content {
+        @include flexColumn();
+        width: auto;
+    }
+    .about-rightside__item {
+        width: 300px;
+    }
+    .about-rightside {
+        margin-left: 0;
     }
 }
