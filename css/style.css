@@ -1229,9 +1229,6 @@ form {
         flex-wrap: wrap;
     width: calc(100% - 35px);
   }
-  .services-rightside__advantages :nth-child(2n) {
-    display: none;
-  }
   .services-rightside__img {
     width: 420px;
     height: auto;
@@ -1269,22 +1266,41 @@ form {
 @media all and (max-width: 1366px) {
   .services-rightside__img {
     margin-right: 15px;
-  }
-  .leftside__title {
-    font-size: 50px;
+    width: 360px;
+    height: 220px;
   }
   .leftside__headlines {
-    margin-top: 150px;
+    margin-top: 180px;
+  }
+  form {
+    width: 240px;
+    height: 180px;
+    margin-top: 50px;
+  }
+  .form-control {
+    width: 100%;
+    height: auto;
+  }
+  .btn-danger {
+    width: 100%;
   }
   .services-rightside__margin {
     margin-top: 50px;
   }
   .rightside {
-    width: 250px;
+    width: 400px;
+  }
+  .rightside__img {
+    width: auto;
+    height: auto;
+    left: 40.85%;
+    right: 7.17%;
+    top: 10.06%;
+    bottom: 15.62%;
   }
   .rightside__img_size {
-    width: auto;
-    height: 500px;
+    width: 710px;
+    height: 540px;
   }
   .prod-rightside {
     margin-top: 35px;
@@ -1301,6 +1317,9 @@ form {
   }
   .services-leftside {
     padding-top: 150px;
+  }
+  .leftside__title {
+    font-size: 48px;
   }
   #section-section2, #section-section3, #section-section5 {
     background-position-y: -120px;
@@ -1326,16 +1345,69 @@ form {
     margin-bottom: 0;
     margin-top: 150px;
   }
+  .services-leftside__title {
+    font-size: 48px;
+  }
+  .services-rightside__title {
+    margin-bottom: 30px;
+  }
+  .services-leftside__license {
+    margin-top: 15px;
+  }
+  .services-leftside__text, .services-rightside__text {
+    font-size: 14px;
+  }
+  .menu__link, .services-leftside__license__text, .services-rightside__adv, .services-rightside__price table tr td {
+    font-size: 12px;
+  }
+  .services-rightside__text {
+    margin-bottom: 20px;
+    width: 320px;
+    height: 120px;
+  }
+  .header {
+    height: 60px;
+  }
+  .about {
+    width: 80px;
+    height: 80px;
+    padding-top: 15px;
+  }
+  .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    align-items: center;
+  }
+  .contact__btn {
+    margin-right: 15px;
+  }
+  .services-rightside__advantages {
+    width: 328px;
+  }
+  .services-rightside__advantages {
+    margin-top: 20px;
+  }
+  .services-rightside {
+    margin-right: 120px;
+  }
 }
 
 @media all and (max-width: 1280px) {
   .leftside__headlines {
     margin-top: 180px;
-  }
-  .services-rightside__img {
-    width: 400px;
-    height: auto;
-    margin-right: 15px;
   }
   .services-rightside__text {
     margin-bottom: 40px;
