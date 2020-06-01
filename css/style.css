@@ -1858,7 +1858,7 @@ form {
             transform: translateX(-50%);
     width: 4px;
     background-color: #F01212;
-    height: 440px;
+    height: 380px;
     z-index: 0;
   }
   .how-rightside .how-rightside__entries {
@@ -1916,6 +1916,7 @@ form {
   .how-rightside__text {
     width: 300px;
     margin-left: 20px;
+    font-size: 22px;
   }
   .services-rightside__margin {
     margin-right: 0;
@@ -1931,6 +1932,31 @@ form {
   }
   .services-rightside__advantages {
     margin: 10px 0;
+  }
+  .about-rightside__title {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+  }
+  .about-licenses__link {
+    font-size: 16px;
+  }
+  .about-rightside__inner-text, .about-rightside__text {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .about-rightside__item__text {
+    font-size: 20px;
+    width: 150px;
+  }
+  .about-rightside {
+    padding-top: 40px;
+  }
+  .contacts-leftside__info {
+    width: 100%;
+  }
+  .footer {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
