@@ -1092,7 +1092,7 @@ form {
         width: 500px;
     }
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 420px) {
     .html, body {
         overflow: auto;
     }
@@ -1372,5 +1372,20 @@ form {
     .how-rightside__text {
         width: 300px;
         margin-left: 20px;
+    }
+    .services-rightside__margin {
+        margin-right: 0;
+    }
+    .menu__link, .services-leftside__license__text, .services-rightside__adv, .services-rightside__price table tr td {
+        font-size: 14px;
+    }
+    .services-rightside__advantages :nth-child(2n) {
+        display: none;
+    }
+    .services-rightside__text {
+        margin-bottom: 0;
+    }
+    .services-rightside__advantages {
+        margin: 10px 0;
     }
 }
